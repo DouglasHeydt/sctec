@@ -1,127 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalist Mockup</title>
+    <title>Formulário</title>
     <style>
-        /* Basic Reset and Fonts */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Navigation */
-        nav {
+            background-color: #4b5563; /* Fundo cinza escuro da imagem */
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            padding: 1rem 5%;
-            background: #fff;
-            border-bottom: 1px solid #eee;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #333;
         }
 
-        nav .logo {
-            font-size: 1.5rem;
+        .logo {
+            color: white;
+            font-size: 2rem;
             font-weight: bold;
-            color: #2563eb;
-        }
-
-        nav ul {
-            list-style: none;
+            margin-bottom: 20px;
             display: flex;
-            gap: 20px;
+            align-items: center;
+            gap: 10px;
         }
 
-        /* Hero Section */
-        header {
-            text-align: center;
-            padding: 80px 10%;
-            background: #f9fafb;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            background: #2563eb;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        /* Features Section */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            padding: 60px 10%;
-        }
-
-        .feature-card {
-            padding: 20px;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
+        .container {
+            background-color: white;
             padding: 40px;
-            background: #333;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        label {
+            width: 150px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .required-tag {
+            margin-left: 10px;
+            color: #666;
+            font-size: 0.8rem;
+            width: 80px;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn-enviar {
+            background-color: #1d8cf8;
             color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .btn-enviar:hover {
+            background-color: #1670c7;
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">BrandName</div>
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-        </ul>
-    </nav>
+    <div class="logo">
+        <span>Preencha as suas informações...</span> 
+    </div>
 
-    <header>
-        <h1>Build something great.</h1>
-        <p>This is a simple mockup landing page to get your project started in seconds.</p>
-        <a href="#" class="btn">Get Started</a>
-    </header>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label>Nome:</label>
+                <input type="text" placeholder="Digite seu nome" required>
+            </div>
 
-    <section class="features">
-        <div class="feature-card">
-            <h3>Fast</h3>
-            <p>Optimized for speed and simplicity right out of the box.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Modern</h3>
-            <p>Clean design using CSS Grid and Flexbox for responsiveness.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Easy</h3>
-            <p>Edit the HTML directly to change colors, text, or layout.</p>
-        </div>
-    </section>
+            <div class="form-group">
+                <label>E-mail:</label>
+                <input type="email" placeholder="Digite seu e-mail" required>
+            </div>
 
-    <footer>
-        <p>&copy; 2026 BrandName. All rights reserved.</p>
-    </footer>
+            <div class="form-group">
+                <label>Idade:</label>
+                <input type="text" placeholder="Digite sua idade" required>
+            </div>
+
+            <div class="form-group">
+                <label>Assunto:</label>
+                <input type="text" placeholder="assunto" required>
+            </div>
+
+            <div class="form-group" style="align-items: flex-start;">
+                <label>Turnos Disponíveis:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item"><input type="checkbox" checked> Manhã</div>
+                    <div class="checkbox-item"><input type="checkbox"> Tarde</div>
+                    <div class="checkbox-item"><input type="checkbox"> Noite</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Escolaridade:</label>
+                <select>
+                    <option>Selecione...</option>
+                    <option>Ensino Fundamental</option>
+                    <option>Ensino Médio</option>
+                    <option>Ensino Superior</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Sobre mim:</label>
+                <textarea rows="2" ></textarea>
+            </div>
+
+            <div class="btn-container">
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </div>
+        </form>
+    </div>
 
 </body>
 </html>
