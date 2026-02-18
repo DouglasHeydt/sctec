@@ -81,4 +81,47 @@
         /* Footer */
         footer {
             text-align: center;
-            padding: 4
+            padding: 40px;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">BrandName</div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Build something great.</h1>
+        <p>This is a simple mockup landing page to get your project started in seconds.</p>
+        <a href="#" class="btn">Get Started</a>
+    </header>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Fast</h3>
+            <p>Optimized for speed and simplicity right out of the box.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Modern</h3>
+            <p>Clean design using CSS Grid and Flexbox for responsiveness.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Easy</h3>
+            <p>Edit the HTML directly to change colors, text, or layout.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 BrandName. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
